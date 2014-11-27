@@ -1,6 +1,14 @@
 require "activerecord-postgres-composite-types/active_record"
 
 ActiveRecord::Schema.define do
+  execute "DROP TYPE IF EXISTS compfoo CASCADE"
+  execute "DROP TYPE IF EXISTS my_type CASCADE"
+  execute "DROP TYPE IF EXISTS rgb_color CASCADE"
+  execute "DROP TYPE IF EXISTS nested_type CASCADE"
+  execute "DROP TYPE IF EXISTS nested_nested_type CASCADE"
+  execute "DROP TABLE IF EXISTS foos"
+  execute "DROP TABLE IF EXISTS bars"
+  execute "DROP TABLE IF EXISTS bar2s"
   execute "CREATE TYPE compfoo AS (f1 int, f2 text)"
   execute "CREATE TYPE my_type AS (name varchar, number int, date timestamp)"
   execute "CREATE DOMAIN rgb_color AS TEXT CHECK(VALUE IN ('red', 'green', 'blue'))"

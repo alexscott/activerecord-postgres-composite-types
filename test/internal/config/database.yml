@@ -1,5 +1,6 @@
 test:
   adapter:  postgresql
-  database: <%= ENV['DATABASE_NAME_TEST'] %>
-  username: <%= ENV['DATABASE_USERNAME'] %>
-  password: <%= ENV['DATABASE_PASSWORD'] %>
+  database: ar_pg_composite_test
+  host: /tmp/
+  user: optimus
+  password: transformers

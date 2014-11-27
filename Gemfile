@@ -15,4 +15,5 @@ group :development do
   gem 'simplecov', '>= 0'
   gem 'combustion', '~> 0.5.2'
   gem 'tzinfo-data' if AR_VERSION > '3.2.0'
+  gem 'pry'
 end
